@@ -1,10 +1,10 @@
 <template>
     <div class="problemEditSubmitView" id="ProblemEditSubmit">
-        <el-row :gutter="[24, 24]">
-            <el-col :md="12" :xs="24">
-                <el-tabs @tab-click="clickChange" v-model="tabName">
-                    <el-tab-pane label="题目" name="tab1">
-                        <el-card v-if="questionInfo">
+        <el-row :gutter="24" style="display: flex">
+            <el-col :span="11" :md="12" :xs="24">
+                <el-tabs @tab-click="clickChange" v-model="tabName" >
+                    <el-tab-pane label="题目" name="tab1" >
+                        <el-card v-if="questionInfo" style="height:65vh; overflow: auto">
                             <template #header>
                                 <div class="title">
                                     {{ questionInfo.title }}
@@ -28,7 +28,7 @@
                         </el-card>
                     </el-tab-pane>
                     <el-tab-pane label="提交记录" name="tab2">
-                        <el-card v-if="questionSubmitInfo.questionInfo">
+                        <el-card v-if="questionSubmitInfo.questionInfo" style="height: 65vh; overflow: auto">
                             <el-table stripe style="width: 100%" :data="questionSubmitInfo.questionInfo">
                                 <el-table-column prop="questionId" label="题目号" width="180" />
                                 <el-table-column prop="language" label="编程语言" width="180" />
@@ -45,8 +45,8 @@
 
                     </el-tab-pane>
                 </el-tabs>
-            </el-col>
-            <el-col :md="12" :xs="24">
+            </el-col >
+            <el-col :span="11" :md="12" :xs="24" >
                 <el-form :model="form" layout="inline">
                     <el-form-item field="title" label="编程语言" style="min-width: 240px;">
                         <el-select v-model="form.language" :style="{ width: '320px' }" placeholder="选择编程语言">
@@ -56,7 +56,7 @@
                         </el-select>
                     </el-form-item>
                 </el-form>
-                <CodingEditor :value="form.code" :language="form.language" :handle-change="handleChange" />
+                <CodingEditor :value="form.code" :language="form.language" :handle-change="handleChange" style="height:60vh;"/>
                 <br />
                 <el-button color="#74cd87" :icon="UploadFilled" :dark="isDark" plain @click="doSubmit">提交</el-button>
                 <el-button color="#e0e3ea" :icon="CaretTop" @click="duRunning">运行</el-button>
