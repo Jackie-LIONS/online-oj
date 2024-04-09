@@ -19,19 +19,19 @@ const props = defineProps({
 const codeEditorRef = ref();
 const codeEditor = ref();
 
-watch(()=>props.language,()=>{
-    codeEditor.value = monaco.editor.create(codeEditorRef.value, {
-        value: props.value,
-        language: props.language,
-        automaticLayout: true,
-        minimap: {
-            enabled: true,
-        },
-        colorDecorators: true,
-        readOnly: false,
-        theme: "vs-dark",
-    });
-})
+// watch(()=>props.language,()=>{
+//     codeEditor.value = monaco.editor.create(codeEditorRef.value, {
+//         value: props.value,
+//         language: props.language,
+//         automaticLayout: true,
+//         minimap: {
+//             enabled: true,
+//         },
+//         colorDecorators: true,
+//         readOnly: false,
+//         theme: "vs-dark",
+//     });
+// })
 onMounted(() => {
     if(!codeEditorRef.value){
         return;
