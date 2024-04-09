@@ -39,13 +39,13 @@
             <div class="flex-grow2" />
 
             <el-menu-item index="/selfInfo">
-                <span>个人中心</span> 
+                <span>个人中心</span>
             </el-menu-item>
 
             <el-sub-menu index="/login">
                 <template #title>登录</template>
                     <el-menu-item @click="logoutHandler">注销</el-menu-item>
-            </el-sub-menu>   
+            </el-sub-menu>
         </el-menu>
     </div>
   </template>
@@ -70,13 +70,13 @@
         border: 0;
         box-shadow: 0 0 0 0px;
     }
- 
+
     .el-input__wrapper {
         border-radius: 95px 0 0 95px;
         border: 1px solid black;
         box-shadow: 0 0 0 0px;
     }
- 
+
     .el-input-group__append {
         border-radius:0 95px 95px 0;
         border: 0;
@@ -106,4 +106,4 @@
 
     }
 </script>
-  
+
