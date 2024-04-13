@@ -4,7 +4,7 @@
 
 <script setup>
 import * as monaco from 'monaco-editor'
-import { onMounted,ref ,toRaw, defineProps, watch } from 'vue'
+import { onMounted,ref ,toRaw, defineProps } from 'vue'
 
 // 定义组件属性类型
 const props = defineProps({

@@ -12,7 +12,7 @@
             <el-menu-item index="0">
                 <img
                     style="width: 64px"
-                    src="D:\DataStorage\vscode\online-oj\src\assets\imges\logo.png"
+                    src="https://element-plus.org/images/element-plus-logo.svg"
                     alt="Element logo"
                 />
             </el-menu-item>
