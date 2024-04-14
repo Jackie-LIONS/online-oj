@@ -87,7 +87,7 @@
       <el-table-column label="标签" prop="tags" />
       <el-table-column label="提交数" prop="submitNum" />
       <el-table-column label="通过率" prop="acceptedNum" />
-      <el-table-column label="难度" prop="acceptedNum" />
+      <el-table-column label="难度" prop="difficulty" />
       <el-table-column align="right">
         <template #header>
           <el-input v-model="search" size="small" placeholder="Type to search" />
