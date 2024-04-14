@@ -1,11 +1,8 @@
 <template>
   <div class="box">
 
-     <!-- 路由跳转到登录 -->
-     <div class="msg">
-        <span>已经有账号了？点击下方按钮跳转登录</span><br />
-        <el-button type="primary" @click="login">登录</el-button>
-     </div>
+     <div class="title">Lion-在线编程平台</div>
+
 
     <div class="formRegister">
         <el-form :model="user" :rules="rules" ref="user" id="loginForm" label-width="100px">
@@ -33,10 +30,15 @@
             <el-button type="primary" @click.native.prevent="submitForm">注册</el-button>
           </el-form-item>
         </el-form>
+
+        <div class="msg">
+          <span>已经有账号了？点击下方按钮跳转登录</span><br />
+          <el-link type="primary" @click="login">登录</el-link>
+        </div>
       </div>
     </div>
   </template>
-  
+
   <script >
   import { ref } from 'vue';
   import api from '@/api/index.js';
@@ -119,23 +121,25 @@ body {
   margin: 0;
   padding: 0;
 }
+.title{
+  position: fixed;
+  font-size: 40px;
+  top:30%;
+  right: 200px;
+  color:#ffffff;
+}
+
 .msg {
-  background-image: url(/src/assets/imges/cloud.png);
-  background-size: 100% 100%;
-  color: #fff;
-  font-size: 15px;
-  display: inline;
-  margin-top: 9rem;
-  width: 30%;
-  float: left;
-  margin-left: 51rem;
+  margin-left: 100px;
+  color: #000000;
+  display: flex;
 }
 .formRegister {
   width: 27%;
   height: 70%;
   float: left;
   margin-left: 11vw;
-  margin-top: 6%;
+  margin-top: 15%;
 }
 #loginForm >>> .el-form-item__label {
   font-size: 16px;

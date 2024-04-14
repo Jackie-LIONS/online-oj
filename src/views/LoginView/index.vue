@@ -2,15 +2,11 @@
     <div class="login-container">
 
         <!-- 路由跳转到注册 -->
-        <div class="msg" >
-            <span>还没有账号？</span><br />
-            <span>点击下方按钮进行注册</span><br /><br />
-            <el-button type="primary" @click="register">注册</el-button>
-        </div>
+
 
         <el-form  class="user" size="large" :model="user">
             <div class="title-container">
-                <h3 class="title">Lion-在线编程平台登录</h3>
+                <h3 class="title">Lion-在线编程平台</h3>
             </div>
 
             <el-form-item prop="username">
@@ -26,6 +22,11 @@
             <el-button class="loginButtom" type="primary" @click.native.prevent="handleLogin">登录</el-button>
 
         </el-form>
+        <div class="msg" >
+          <span>还没有账号？</span>
+          <span>点击下方按钮进行注册</span>
+          <el-link type="primary" @click="register">注册</el-link>
+        </div>
     </div>
 </template>
 
@@ -45,7 +46,7 @@ const router= useRouter()
 // 图片验证码
 const captchaImg = ref('');
 onMounted(()=>{
-    captchaImg.value = 'http://localhost:9090/user/captcha';    
+    captchaImg.value = 'http://localhost:9090/user/captcha';
 })
 
 // 声明用户信息
@@ -114,13 +115,10 @@ const refreshCaptcha = () => {
     margin: 20px auto;
 }
 .msg {
-  background: url(/src/assets/imges/cloud.png) no-repeat center;
-  color: #fff;
-  font-size: 15px;
-  display: inline;
-  margin-top: 9rem;
-  width: 30%;
-  float: left;
-  margin-left: 51rem;
+  position: absolute;
+  top: 525px;
+  right: 92px;
+  color: #ffffff;
+  display: flex;
 }
 </style>
