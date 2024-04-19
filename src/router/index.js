@@ -39,7 +39,7 @@ const router = createRouter({
             component: () => import("../views/PersonalCenterView/SubmitRecord.vue"),
           },
           {
-            path: '/myblog', 
+            path: '/myblog',
             name: 'Blog',
             component: () => import("../views/PersonalCenterView/Blog.vue"),
           },
@@ -66,6 +66,11 @@ const router = createRouter({
           // props: true,
           // src\views\ProblemView\ProblemEditSubmitView
           component: () => import("../views/ProblemView/ProblemEditSubmitView/index.vue")
+        },
+        {
+          path: '/article',
+          name: 'articleView',
+          component: () => import("../views/ArticleView/index.vue")
         }
       ]
     },
