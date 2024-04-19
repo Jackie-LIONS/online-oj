@@ -2,8 +2,6 @@
     <div class="login-container">
 
         <!-- 路由跳转到注册 -->
-
-
         <el-form  class="user" size="large" :model="user">
             <div class="title-container">
                 <h3 class="title">Lion-在线编程平台</h3>
