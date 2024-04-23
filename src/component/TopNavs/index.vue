@@ -88,7 +88,7 @@
 </style>
 
 <script setup>
-    import { ref } from "vue";
+    import { onMounted,ref } from "vue";
     import { Search } from '@element-plus/icons-vue'
     import { useLoginStore} from '@/stores/loginStore.js'
     import { useRouter } from "vue-router";
@@ -102,8 +102,12 @@
         // 存储信息清空，并且 回退到登录页
         loginStore.token = ""
         router.push("/login")
-
-
     }
+
+    onMounted(()=>{
+      if (router.currentRoute.value.fullPath !== "/" ) {
+        active.value=router.currentRoute.value.fullPath
+      }
+    })
 </script>
 

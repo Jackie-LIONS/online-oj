@@ -15,7 +15,7 @@ const router = createRouter({
       children: [
         // 添加二级子路由
         {
-          path: '/',
+          path: '',
           name: 'home',
           component: HomeView
         },
