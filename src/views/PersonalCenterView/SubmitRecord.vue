@@ -6,11 +6,18 @@
                 {{ moment(createTime).format("YYYY-MM-DD HH:mm") }}
             </el-table-column>
             <el-table-column prop="questionId" label="ID" width="180" />
-            <el-table-column prop="questionName" label="题目" width="180"/>
+            <el-table-column prop="title" label="题目" width="180"/>
             <el-table-column prop="status" label="通过" >
                 <template v-slot="{ row }">
                     <span v-if="row.status === 3" style="color: green;">PASS</span>
                     <span v-else style="color: red;">FALSE</span>
+                </template>
+            </el-table-column>
+            <el-table-column prop="difficulty" label="难度" >
+                <template v-slot="{ row }">
+                    <span v-if="row.difficulty === 1" style="color: green;">简单</span>
+                    <span v-else-if="row.difficulty === 2" style="color: yellow;">中等</span>
+                    <span v-else style="color: red;">困难</span>
                 </template>
             </el-table-column>
 

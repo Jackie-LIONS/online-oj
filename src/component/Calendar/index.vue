@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 400px;height:205px;float: right">
+  <div style="width: 342px;height:205px;float: right">
     <section class='m-calendar' :style="dateStyle">
       <!-- 切换月份 -->
       <header class='changeMonth'>

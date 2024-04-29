@@ -175,7 +175,7 @@ export default {
 }
 
 .plan{
-  width: 850px;
+  width: 934px;
 }
 
 .plan h2{
@@ -201,7 +201,7 @@ export default {
   padding: 0.5rem;
   border-radius: 5px;
   height: 72px;
-  width: 250px;
+  width: 277px;
   margin-right: 1rem;
 }
 

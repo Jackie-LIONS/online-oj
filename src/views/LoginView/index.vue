@@ -44,7 +44,7 @@ const router= useRouter()
 // 图片验证码
 const captchaImg = ref('');
 onMounted(()=>{
-    captchaImg.value = 'http://localhost:9090/user/captcha';
+    captchaImg.value = 'http://www.lion.com/user/captcha';
 })
 
 // 声明用户信息
@@ -67,7 +67,7 @@ const handleLogin= ()=>{
     }).then(res=>{
         console.log(res.data);
         if(res.data.code === 200){
-            loginStroe.token = res.data.data
+            loginStroe.token = 'Bearer '+res.data.data
             // loginStroe.username = user.username
             router.push('/')
         }else{
@@ -79,7 +79,7 @@ const handleLogin= ()=>{
 
 // 验证码刷新
 const refreshCaptcha = () => {
-    captchaImg.value = 'http://localhost:8002/user/captcha' + '?time=' + Date.now();
+    captchaImg.value = 'http://www.lion.com/user/captcha' + '?time=' + Date.now();
 }
 
 </script>

@@ -2,7 +2,7 @@
  * 存放所有的网络请求地址
  */
 const base ={
-    baseUrl: "http://localhost:9090",
+    baseUrl: "http://www.lion.com",
     login: "/user/login",
     register: "/user/register",
     userInfo: "/user/getUserInfo",
