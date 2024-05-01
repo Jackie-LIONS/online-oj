@@ -38,8 +38,10 @@ const api={
         return axios.get(base.baseUrl+base.singleQuestionSubmitPage,{
             params
         })
+    },
+    getNewsList(params){
+        return axios.get(base.baseUrl+base.NewsList,params)
     }
-    
 }
 
 export default api; 

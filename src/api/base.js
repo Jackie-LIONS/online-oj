@@ -11,6 +11,7 @@ const base ={
     questionEditSubmit: "/question/submit",
     questionSubmitList: "/question/searched",
     singleQuestionSubmitPage: "/question/getSingleSubmitPage",
+    NewsList: "/user/news/all"
 
 }
 export default base
