@@ -9,7 +9,6 @@ import { ref,onMounted, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import MdViewer from '@/component/MdViewer/index.vue'
 import api from '@/api/index';
-import { id } from 'element-plus/es/locale';
 import { ElMessage } from 'element-plus';
 const router = useRoute()
 
