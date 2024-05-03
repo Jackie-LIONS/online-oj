@@ -22,6 +22,7 @@
     </el-tabs>
   </div>
 </template>
+
 <script setup>
 import { ref, defineComponent } from 'vue'
 import ArticleItem from '@/component/ArticleItem/index.vue'
@@ -53,6 +54,7 @@ const goToArticle = (id) => {
 
 
 </script>
+
 <style scoped>
 ::v-deep .el-tabs__item {
   color: #555666;

@@ -13,7 +13,7 @@ export const useLoginStore = defineStore("login",{
         strategies:[
             {
                 key:"token",    // 自定义key值,存储到本地时的key
-                storage:sessionStorage,   // 选择存储的方式（localStorage、SesstionStorage）
+                storage:localStorage,   // 选择存储的方式（localStorage、SesstionStorage）
                 paths: ['token'],
             }
         ]

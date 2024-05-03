@@ -10,8 +10,14 @@ const base ={
     questionEdit: "/question/findById",
     questionEditSubmit: "/question/submit",
     questionSubmitList: "/question/searched",
+    getNextQuestionId: "/question/getNextQuestionId",
     singleQuestionSubmitPage: "/question/getSingleSubmitPage",
-    NewsList: "/user/news/all"
+    NewsList: "/user/news/all",
+    publishArticle: "/article/publish",
+    articleDetail: "/article/selectById",
+    articlePage: "/article/selectPage",
+    articleDelete: "/article/delete",
+
 
 }
 export default base

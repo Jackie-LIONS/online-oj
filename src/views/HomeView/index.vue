@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref } from 'vue'
+import { onBeforeMount, ref,reactive } from 'vue'
 import MdEditor from '@/component/MdEditor/index.vue'
 import CodingEditor from '@/component/CodingEditor/index.vue'
 import api from '@/api/index.js'

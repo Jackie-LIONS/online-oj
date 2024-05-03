@@ -25,6 +25,11 @@ const router = createRouter({
           component: () => import("../views/BlogView/index.vue")
         },
         {
+          path: '/im',
+          name: 'im',
+          component: () => import("../views/im/im.vue"),
+        },
+        {
           path: '/selfInfo',
           name: 'SelfInfo',
           component: () => import("../views/PersonalCenterView/SelfInfo.vue"),
@@ -71,7 +76,7 @@ const router = createRouter({
           path: '/article',
           name: 'articleView',
           component: () => import("../views/ArticleView/index.vue")
-        }
+        },
       ]
     },
     {
@@ -83,7 +88,7 @@ const router = createRouter({
       path: "/register",
       name: "register",
       component: RegisterView
-    }
+    },
   ]
 })
 

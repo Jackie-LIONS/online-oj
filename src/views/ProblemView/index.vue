@@ -155,7 +155,16 @@ export default {
     },
     // 日期点击事件
     clickDate(){
-      console.log(123)
+      api.getNextQuestionId().then(res=>{
+        if(res.data.code === 200){
+          let item = res.data.data
+          console.log(item);
+          this.$router.push(`/problemEdit?id=${item}`);
+        }else{
+          // 失败给出用户提示
+          ElMessage.error(res.data.message)
+        }
+      })
     }
   },
   mounted() {

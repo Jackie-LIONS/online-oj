@@ -21,6 +21,9 @@ const api={
             params
         })
     },
+    getNextQuestionId(params){
+        return axios.get(base.baseUrl+base.getNextQuestionId,params)
+    },
     getQusetionEdit(params){
         return axios.get(base.baseUrl+base.questionEdit,{
             params
@@ -41,6 +44,18 @@ const api={
     },
     getNewsList(params){
         return axios.get(base.baseUrl+base.NewsList,params)
+    },
+    postPublishArticle(params){
+        return axios.post(base.baseUrl+base.publishArticle,{params})
+    },
+    getArticleDetail(params){
+        return axios.get(base.baseUrl+base.articleDetail,params)
+    },
+    getArticlePage(params){
+        return axios.get(base.baseUrl+base.articlePage,params)
+    },
+    postArticleDelete(params){
+        return axios.post(base.baseUrl+base.articleDelete,params)
     }
 }
 
