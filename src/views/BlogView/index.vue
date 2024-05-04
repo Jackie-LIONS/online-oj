@@ -35,7 +35,7 @@ const active_name = ref('first')
 
 const article_list = [
   {
-    id:0,
+    id:1,
     image_url: 'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg',
     title: '【Linux】nmcli命令详解',
     content: '以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令，以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令，以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令，以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令以往我都是在linux的系统中都是通过配置文件来配置和修改ip的，今天我们就来说一说nmcli命令配置网络。目前所有的linux系统配置网卡等信息，均已经推行Network-Manager服务去管理。nmcli 是 NetworkManager 的命令',
@@ -44,12 +44,13 @@ const article_list = [
 ]
 
 const goToArticle = (id) => {
-  router.push({
-    path:'/article',
-    query:{
-      id:id
-    }
-  })
+  router.push(`/article?id=${id}`)
+  // router.push({
+  //   path:'/article',
+  //   query:{
+  //     id:id
+  //   }
+  // })
 }
 
 

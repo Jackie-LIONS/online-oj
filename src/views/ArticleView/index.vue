@@ -6,12 +6,15 @@
 
 <script setup>
 import { ref,onMounted, reactive } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router';
 import MdViewer from '@/component/MdViewer/index.vue'
 import api from '@/api/index';
 import { ElMessage } from 'element-plus';
-const router = useRoute()
 
+// 获取路由对象
+const router = useRouter();
+
+// 使用 ref 创建响应式变量
 const id = ref('');
 
 const article_detail = reactive({
@@ -21,7 +24,7 @@ const article_detail = reactive({
   updateTime: "",
 });
 const articleDetail = async ()=>{
-  api.getArticleDetail({
+  await api.getArticleDetail({
     articleId : id.value
   }).then(res =>{
     if(res.data.code === 200){
@@ -35,6 +38,7 @@ const articleDetail = async ()=>{
 onMounted(() => {
     // 通过 router.currentRoute.value.query.id 获取路由参数
     id.value = router.currentRoute.value.query.id;
+    console.log(id.value,"湖南-");
     articleDetail();
 })
 

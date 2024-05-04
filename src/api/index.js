@@ -49,7 +49,7 @@ const api={
         return axios.post(base.baseUrl+base.publishArticle,{params})
     },
     getArticleDetail(params){
-        return axios.get(base.baseUrl+base.articleDetail,params)
+        return axios.get(base.baseUrl+base.articleDetail,{params})
     },
     getArticlePage(params){
         return axios.get(base.baseUrl+base.articlePage,params)

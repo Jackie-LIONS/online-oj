@@ -73,9 +73,6 @@ import { useRouter } from 'vue-router';
 import CodingEditor from '@/component/CodingEditor/index.vue';
 import MdViewer from '@/component/MdViewer/index.vue';
 import moment from "moment";
-
-const tabName = ref('tab1');
-
 // 获取路由对象
 const router = useRouter();
 
