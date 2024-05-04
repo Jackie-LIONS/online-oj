@@ -1,5 +1,5 @@
 <template>
-  <div class="ArticleItem">
+  <div class="  ArticleItem">
     <div class="left">
       <el-image :src="imageUrl" style="width: 300px;height: 150px;" fit="cover"/>
     </div>

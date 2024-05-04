@@ -1,6 +1,17 @@
 <template>
   <div class="container">
-    <MdViewer :value="article_detail.content || ''" />
+    <div class="left">
+
+    </div>
+    <div class="right">
+      <h1>{{article_detail.title}}测试</h1>
+      <div class="tagList">
+        <el-tag type="info">Tag 1</el-tag>
+        <el-tag type="info">Tag 1</el-tag>
+      </div>
+
+      <MdViewer :value="article_detail.content || ''" />
+    </div>
   </div>
 </template>
 
@@ -19,7 +30,7 @@ const id = ref('');
 
 const article_detail = reactive({
   articleId: "",
-  content: "",
+  content: "111111111111111111111111111111111111111111",
   createTime: "",
   updateTime: "",
 });
@@ -44,6 +55,29 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.container{
+  display: flex;
+  justify-content: space-around;
 
+  .left{
+    width: 25%;
+    height: 100px;
+    background: #ffffff;
+  }
+  .right{
+    padding:20px 50px;
+    width: 65%;
+    height: 1000px;
+    background-color: #ffffff;
+
+    .tagList{
+      margin: 10px 0;
+
+      > .el-tag{
+        margin-left: 10px;
+      }
+    }
+  }
+}
 </style>
